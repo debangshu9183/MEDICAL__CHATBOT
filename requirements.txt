@@ -9,7 +9,7 @@ faiss-cpu
 langchain
 langchain-community
 langchain-pinecone
-langchain-groq      # ✔ last valid version
+langchain-groq    
 
 pinecone-client
 
@@ -18,7 +18,7 @@ groq
 
 # Audio + Speech
 SpeechRecognition
-pyaudio
+
 pydub
 sounddevice
 
