@@ -4,7 +4,7 @@ transformers
 torch
 flask
 faiss-cpu
-
+pypdf
 # LangChain Correct Versions
 langchain
 langchain-community
