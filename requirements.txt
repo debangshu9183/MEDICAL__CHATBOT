@@ -36,3 +36,4 @@ uvicorn
 # Utility
 python-dotenv
 requests
+langchain-astradb
