@@ -1,0 +1,38 @@
+PyMuPDF
+sentence-transformers
+transformers
+torch
+
+faiss-cpu
+
+# LangChain Correct Versions
+langchain
+langchain-community
+langchain-pinecone
+langchain-groq      # ✔ last valid version
+
+pinecone-client
+
+# Groq SDK
+groq
+
+# Audio + Speech
+SpeechRecognition
+pyaudio
+pydub
+sounddevice
+
+# ElevenLabs TTS
+elevenlabs
+
+# Image Processing
+Pillow
+
+# Web/App
+gradio
+fastapi
+uvicorn
+
+# Utility
+python-dotenv
+requests

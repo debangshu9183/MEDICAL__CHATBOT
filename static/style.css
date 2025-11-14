@@ -1,0 +1,88 @@
+/* Smooth clean background */
+body {
+    background: linear-gradient(135deg, #e9eef7, #f5f7fa);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    padding-top: 30px;
+}
+
+/* Chat Card */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* Header */
+.card-header {
+    border-radius: 15px 15px 0 0;
+    background: #2b7cff !important;
+    color: white;
+    padding: 15px 20px;
+}
+
+/* Chat area */
+#messageArea {
+    background: #ffffff;
+    padding: 20px;
+    height: 360px;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee;
+}
+
+/* Chat bubbles */
+#messageArea .user-msg,
+#messageArea .bot-msg {
+    padding: 10px 14px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* User message bubble */
+#messageArea .user-msg {
+    background: #2b7cff;
+    color: white;
+    align-self: flex-end;
+    float: right;
+    clear: both;
+}
+
+/* Bot message bubble */
+#messageArea .bot-msg {
+    background: #eef1f7;
+    color: #333;
+    float: left;
+    clear: both;
+}
+
+/* Timestamp */
+.timestamp {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #888;
+}
+
+/* Input area */
+#text {
+    height: 48px;
+    border-radius: 8px;
+}
+
+/* Send button */
+.btn-primary {
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 119, 255, 0.2);
+    background: #2b7cff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #1f62d1;
+}
+
+/* Smooth scrolling */
+#messageArea {
+    scroll-behavior: smooth;
+}
