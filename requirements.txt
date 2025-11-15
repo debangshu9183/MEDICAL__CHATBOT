@@ -1,12 +1,14 @@
 PyMuPDF
 sentence-transformers
+transformers
+torch
 flask
 faiss-cpu
 pypdf
 # LangChain Correct Versions
 langchain
 langchain-community
-langchain-core
+langchain-pinecone
 langchain-groq    
 
 pinecone-client
@@ -15,9 +17,11 @@ pinecone-client
 groq
 
 
-
+# Image Processing
+Pillow
 
 # Web/App
+gradio
 fastapi
 uvicorn
 
@@ -25,3 +29,4 @@ uvicorn
 python-dotenv
 requests
 langchain-astradb
+
