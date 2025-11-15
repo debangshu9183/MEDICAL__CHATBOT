@@ -202,12 +202,13 @@ git clone https://github.com/debangshu9183/MEDICAL__CHATBOT
 cd medical-chatbot
 
 2. Create .env (example)
-EMBEDDING_PROVIDER=OPENAI
-EMBEDDING_API_KEY=sk-...
-LLM_PROVIDER=GROQ
-LLM_API_KEY=sk-...
-VECTOR_STORE_PATH=./data/faiss.index
-FLASK_ENV=production
+ASTRA_DB_ID=xxxxxxx
+ASTRA_DB_REGION=xxxxxxx
+ASTRA_DB_KEYSPACE=your_keyspace
+ASTRA_DB_APPLICATION_TOKEN=AstraCS:xxxxx
+VECTOR_TABLE_NAME=medical_chunks
+EMBEDDING_PROVIDER=openai
+EMBEDDING_API_KEY=sk-xxxxxx
 
 3. Install dependencies (local / dev)
 python -m venv .venv
@@ -215,8 +216,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 4. Ingest and build the index
-python scripts/ingest_documents.py --input_dir data/clinical_guidelines --output_index data/faiss.index
-python scripts/build_faiss_index.py --input_dir data/ --output_index data/faiss.index
+python scripts/ingest_documents_astra.py --input_dir data/clinical_guidelines
+
 
 5. Run the API (Docker Compose)
 docker-compose up --build
