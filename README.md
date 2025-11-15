@@ -192,7 +192,7 @@ Documents older than 3 years were responsible for 12% of retrievals — consider
 ![RAG Architecture](RAG-Architecture-Model-jpg.png)
 
 ## Frontend
-<img src="images/Screenshot_2025-11-15_021015.png" width="600">
+<img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/363c9e14-d922-40f5-8006-995e3ce07e4a" />
 
 
 ## How to Run This Project
