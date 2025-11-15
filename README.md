@@ -294,7 +294,7 @@ Open your browser to: http://your-ec2-public-ip:5000
 
 ## LIVE DEPLOYMENT LINK
 
-  http://13.51.237.135:5000  
+
 ## Final Recommendations
 Maintain a content freshness policy (regular re-ingestion & review of documents).
 
