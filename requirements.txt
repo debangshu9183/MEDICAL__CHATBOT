@@ -1,14 +1,12 @@
 PyMuPDF
 sentence-transformers
-transformers
-torch
 flask
 faiss-cpu
 pypdf
 # LangChain Correct Versions
 langchain
 langchain-community
-langchain-pinecone
+langchain-core
 langchain-groq    
 
 pinecone-client
@@ -16,20 +14,10 @@ pinecone-client
 # Groq SDK
 groq
 
-# Audio + Speech
-SpeechRecognition
 
-pydub
-sounddevice
 
-# ElevenLabs TTS
-elevenlabs
-
-# Image Processing
-Pillow
 
 # Web/App
-gradio
 fastapi
 uvicorn
 
