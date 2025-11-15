@@ -211,8 +211,10 @@ Top queried topics: dosing, contraindications, pre-op guidelines
 
 Documents older than 3 years were responsible for 12% of retrievals — consider refresh.
 ## Architecture of RAG
+![RAG Architecture](RAG-Architecture-Model-jpg.png)
 
 ## Frontend
+
 ## How to Run This Project
 How to Run This Project
 1. Clone repository
