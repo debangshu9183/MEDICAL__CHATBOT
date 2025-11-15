@@ -126,58 +126,36 @@ Gunicorn/Nginx (optional)
 
 
 ## Project Structure
-
-# medical-chatbot
-MEDIBOT
+# MEDIBOT
+```
+MEDIBOT/
+│
 ├── README.md
-
 ├── .gitignore
-
 ├── requirements.txt
-
 ├── LICENSE
-
-├── .env # Environment variables
-
+├── .env                               # Environment variables
 │
-
-├── app.py # Main Flask/FastAPI application
-
-├── load.py # Application loader/initialization
-
+├── app.py                             # Main Flask/FastAPI application
+├── load.py                            # Application loader/initialization
 │
-
-├── MEDIBOT/ # Core application package
-
-│ ├── \_\_init\_\_.py
-
-│ ├── data\_converter.py # Convert documents to processable format
-
-│ ├── ingest.py # Document ingestion pipeline
-
-│ └── retrieval\_generator.py # RAG retrieval & generation logic
-
+├── MEDIBOT/                           # Core application package
+│   ├── __init__.py
+│   ├── data_converter.py             # Convert documents to processable format
+│   ├── ingest.py                     # Document ingestion pipeline
+│   └── retrieval_generator.py        # RAG retrieval & generation logic
 │
-
-├── DATA/ # Medical knowledge sources
-
-│ ├── clinical\_guidelines/ # PDF/Text clinical guidelines
-
-│ ├── drug\_monographs/ # Pharmacology information
-
-│ └── metadata/ # Document metadata & mappings
-
+├── DATA/                              # Medical knowledge sources
+│   ├── clinical_guidelines/          # PDF/Text clinical guidelines
+│   ├── drug_monographs/              # Pharmacology information
+│   └── metadata/                      # Document metadata & mappings
 │
-
-├── static/ # Static assets (CSS, JS, images)
-
-│ └── ...
-
+├── static/                            # Static assets (CSS, JS, images)
+│   └── ...
 │
-
-└── templates/ # HTML templates
-
-└── ...
+└── templates/                         # HTML templates
+    └── ...
+```
 ## Data Cleaning & Preparation
 Convert PDFs/DOCs to clean text .
 
@@ -214,6 +192,7 @@ Documents older than 3 years were responsible for 12% of retrievals — consider
 ![RAG Architecture](RAG-Architecture-Model-jpg.png)
 
 ## Frontend
+![Chatbot Interface](Screenshot 2025-11-15 021015.png)
 
 ## How to Run This Project
 How to Run This Project
@@ -267,41 +246,49 @@ Example Response:
 
 ## Deployment Notes (EC2)
 his project can be deployed on a single AWS EC2 instance for development or small production use cases. Below are the recommended configurations and steps tailored for running the Medical Chatbot API + FAISS vector store directly on an EC2 machine.
+AWS EC2 Deployment
+1. Launch EC2 Instance
+bash
+# Recommended: Ubuntu 22.04 LTS, t2.medium or larger
+# Security Group: Allow inbound on port 5000 (or your chosen port)
+2. Connect to Instance
+bash
+ssh -i your-key.pem ubuntu@your-ec2-public-ip
+3. Install Dependencies
+bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install python3-pip python3-venv git -y
+4. Clone and Setup
+bash
+git clone https://github.com/debangshu9183/MEDICAL_CHATBOT.git
+cd MEDICAL_CHATBOT
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+5. Configure Environment
+bash
+nano .env
+# Paste your environment variables
+# Save with Ctrl+X, Y, Enter
+6. Run Ingestion (if needed)
+bash
+python3 MEDIBOT/ingest.py
+7. Start Application with nohup
+bash
+nohup python3 app.py --host 0.0.0.0 --port 5000 > logs/app.log 2>&1 &
+8. Verify Running
+bash
+# Check process
+ps aux | grep app.py
 
- 1. Recommended Instance Types
- Small / Development Setup
+# Monitor logs
+tail -f logs/app.log
 
-Use this when your LLM is hosted externally (OpenAI, Claude, etc.):
+# Test endpoint
+curl http://localhost:5000
+9. Access Publicly
+Open your browser to: http://your-ec2-public-ip:5000
 
-EC2 Instance: t3.medium or t3.large
-
-Storage: 30–50 GB EBS
-
-OS: Ubuntu 22.04 or Amazon Linux 2023
-
-Workload:
-
-API (FastAPI)
-
-FAISS vector index
-
-Document ingestion scripts
-
-Dashboard file storage
-
-No GPU needed
-
-Production (Single Instance)
-
-You still use only one EC2 server, but with upgraded specs:
-
-EC2 Instance: c5.xlarge or c6i.xlarge
-
-Storage: 100–200 GB EBS
-
-Better CPU & RAM for high-volume retrieval
-
-HTTPS setup using Nginx + Certbot OR AWS ALB (optional)
 
 ## LIVE DEPLOYMENT LINK
 
@@ -335,4 +322,4 @@ Aspiring Data Scientist
 
 📧 debangshu.data@gmail.com
 
-🔗 LinkedIn:linkedin.com/m/in/debangshu-sadhukhan-ab5861200/
+🔗 LinkedIn:www.linkedin.com/in/debangshu-sadhukhan-ab5861200
