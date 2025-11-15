@@ -192,7 +192,8 @@ Documents older than 3 years were responsible for 12% of retrievals — consider
 ![RAG Architecture](RAG-Architecture-Model-jpg.png)
 
 ## Frontend
-![Chatbot Interface](Screenshot 2025-11-15 021015.png)
+<img src="images/Screenshot_2025-11-15_021015.png" width="600">
+
 
 ## How to Run This Project
 How to Run This Project
