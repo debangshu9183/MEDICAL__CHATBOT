@@ -17,7 +17,7 @@ This project allows users to ask medical-related questions, and the bot replies 
 * Very low latency
 * Accurate medical reasoning
 ✅ 3. Flask Frontend Chat Interface
-* Clean UI
+* Clean UI<img width="678" height="651" alt="Image" src="https://github.com/user-attachments/assets/c2453409-5cd3-4dc7-9f64-5bd87c55181b" />
 * Live messaging
 * User → Bot chat flow with timestamps
 ✅ 4. Persistent Chat Memory
